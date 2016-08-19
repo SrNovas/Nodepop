@@ -47,4 +47,24 @@ router.get('/', function (req, res, next) {
 
 });
 
+router.post('/', function (req, res, next) {
+
+    var anuncio = new Anuncio(req.body);
+
+    anuncio.save((function (err, saved) {
+
+        if(err){
+
+            //Si error nos vamos al siguiente middleware.
+            next(err);
+            return;
+
+        }
+
+        res.json({success: true, saved: saved});
+
+    }));
+
+});
+
 module.exports = router;
