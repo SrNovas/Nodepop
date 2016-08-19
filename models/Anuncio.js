@@ -14,7 +14,7 @@ var anuncioSchema = mongoose.Schema({
 });
 
 //Hacer método estático
-anuncioSchema.static.list = function (filter, start, limit, sort, callback) {
+anuncioSchema.statics.list = function (filter, start, limit, sort, callback) {
 
     var query = Anuncio.find(filter);
 
