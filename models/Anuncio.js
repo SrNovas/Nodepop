@@ -29,5 +29,7 @@ anuncioSchema.statics.list = function (filter, start, limit, sort, callback) {
 
     return query.exec(callback);
 
-};//Lo asignamos al modelo, luego, al crear la colección, lo crearemos como 'anuncios'.
+};
+
+//Lo asignamos al modelo, luego, al crear la colección, lo crearemos como 'anuncios'.
 var Anuncio = mongoose.model('Anuncio', anuncioSchema);

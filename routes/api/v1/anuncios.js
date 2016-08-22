@@ -41,6 +41,7 @@ router.get('/', function (req, res, next) {
 
     }
 
+    //PETA CUANDO SOLO LLAMO A ANUNCIOS EL INDEXOF
     if(typeof precio !== null){
 
         //50 buscará los que tengan precio igual a 50  {precio:'50'}
